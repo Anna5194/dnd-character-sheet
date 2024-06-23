@@ -36,14 +36,34 @@ p{
     width: 90vw;
     margin: auto;
     padding: 20px;
+    display: flex;
+}
+
+[character-card], [new-card]{
+    width: 300px;
+    border: 3px solid rgb(168, 102, 40);
+    border-radius: 15px;
+    margin: 10px;
 }
 
 [character-card]{
-    width: 300px;
-    display: flex;
-    border: 3px solid rgb(168, 102, 40);
-    border-radius: 15px;
     background-color: antiquewhite;
+    display: flex;
+    cursor: pointer;
+}
+
+[new-card]{
+    background-color: rgba(236, 231, 225, 0.767);
+    text-align: center;
+}
+
+[new-card] svg{
+    fill:white;
+}
+
+.active{
+    background-color: rgb(225, 250, 215);
+    border-color: rgb(51, 168, 40);
 }
 
 [character-card] div:last-child{
@@ -53,11 +73,17 @@ p{
 }
 
 [character-picture]{
-    background-image: url("./images/momosy.jpg");
     background-position: center;
     background-size: cover;
     width: 100px;
     height: 90px;
     border-radius: 50%;
     margin: 10px;
+}
+
+[character-card]:nth-child(1) [character-picture]{
+    background-image: url("./images/momosy.jpg");
+}
+[character-card]:nth-child(2) [character-picture]{
+    background-image: url("./images/skay\ lokhart.jpg");
 }
